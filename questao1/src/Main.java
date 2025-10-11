@@ -1,17 +1,23 @@
 import java.util.Scanner;
 
-public class Main{
+public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        Funcionario a = new Funcionario();
+        Scanner tcl = new Scanner(System.in);
+        Funcionario f = new Funcionario();
 
-        System.out.println("Insira o valor da hora trabalhada: ");
-        a.setvHora(sc.nextInt());
+        System.out.println("Digite seu nome: ");
+        f.setNome(tcl.nextLine());
+        System.out.println("Insira sua matrícula: ");
+        f.setMat(tcl.nextInt());
+        System.out.println("Digite o seu salário: ");
+        f.setSal(tcl.nextDouble());
 
-        System.out.println("Insira sua jornada semanal em horas: ");
-        a.setqHoras(sc.nextInt());
+        f.exibirInfos();
+        f.calcularINSS();
+        System.out.println("Seu salário terá um desconto de " + f.getDesconto());
 
-        System.out.println("Seu salário é igual a R$ " + a.calcularSal());
-
+        f.calcularSalarioLiquido();
+        System.out.println("Seu salário líquido é igual a " + f.getSalLiq());
+        f.exibirContracheque();
     }
 }
