@@ -2,8 +2,8 @@ public class Pedido {
     int numero;
     String data;
     double valorTotal;
-    Cliente cliente;   // associação: quem fez o pedido
-    Vendedor vendedor; // associação: quem emitiu o pedido
+    Cliente cliente;   
+    Vendedor vendedor; 
 
     public Pedido(int numero, String data, double valorTotal, Cliente cliente, Vendedor vendedor) {
         this.numero = numero;
@@ -25,4 +25,5 @@ public class Pedido {
         System.out.println("----------------------");
     }
 }
+
 
